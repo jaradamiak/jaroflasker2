@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/dc6dcef8-b461-493d-8291-50c76cb69854/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/jaroflask2",
+    "appService.deploySubpath": "."
+}
