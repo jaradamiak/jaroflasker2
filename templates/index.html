@@ -1,7 +1,12 @@
-<h1>Hello world first page from template !!!200</h1>
-<h2>Hello {{first_name|upper}} {{sur_name}}</h2>
-<h2>{{list}}</h2>
-{% for e in list%}
-<br>{{ e }}</br>
-{% endfor %}
-{{ list.1 }}
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Hello world first page from template !!!200</h1>
+    <h2>Hello {{first_name|upper}} {{sur_name}}</h2>
+    <h2>{{list}}</h2>
+    {% for e in list%}
+    <br>{{ e }}</br>
+    {% endfor %}
+    {{ list.1 }}
+
+{% endblock %}
