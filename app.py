@@ -2,7 +2,7 @@
 # export FLASK_ENV=development
 # export FLASK_APP=app.py
 # pip freeze > requirements.txt
-from flask import Flask, render_template
+from flask import Flask, render_template, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
@@ -29,7 +29,7 @@ def index():
 @app.route('/user/<name>')
 def user(name):
     return render_template('user.html', user_name=name)
-    return "<h1>Hello {}</h1>".format(name)
+    # return "<h1>Hello {}</h1>".format(name)
 
 # invalid URL
 @app.errorhandler(404)
@@ -48,6 +48,7 @@ def name():
     if form.validate_on_submit():
         name = form.name.data
         form.name.data = ''
+        flash("Form submitted succesfully")
     return render_template("name.html", name=name, form=form)
 
 
